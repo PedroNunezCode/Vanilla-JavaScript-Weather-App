@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    padding-top: 20px;
     box-sizing: border-box;
 }
 
@@ -24,6 +25,11 @@ body {
 
 .date span{
     font-size: 2vw;
+}
+
+.icon{
+    padding-top: 20px;
+    height: 10vh;
 }
 
 .location, 
@@ -59,9 +65,4 @@ body {
     display: flex;
     width: 50%;
     height: 15vh;
-}
-
-.days{
-    /* width: justify */
-    display: table-cell;
 }

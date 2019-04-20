@@ -1,12 +1,8 @@
-//First thing first. We need to get the longitude and latitude of our current location.
-// This functionality comes pre built in js. (Thank god lol)
-
 window.addEventListener('load', () => {
     let long;
     let lat;
     const temperatureDescription = document.querySelector('.temperature-description');
     const temperatureDegree = document.querySelector('.temperature-degree');
-    const locationTimeZone = document.querySelector('.location-timezone');
     const temperatureSection = document.querySelector('.degree-section');
     const tempSpan = document.querySelector('.degree-section span');
     
@@ -28,6 +24,7 @@ window.addEventListener('load', () => {
                     return res.json();
                 })
                 .then(data => {
+                    console.log(data);
                     const { temperature, summary, icon } = data.currently;
                     const { timezone } = data;
                     let celcius = (temperature - 32) * (5 / 9);
@@ -36,7 +33,6 @@ window.addEventListener('load', () => {
                     //Set DOM elements to api data.
                     temperatureDegree.textContent = Math.floor(temperature);
                     temperatureDescription.textContent = summary;
-                    locationTimeZone.textContent = timezone.replace(/_/, " ");
                     
                     //Set icon to the canvas in html
                     setIcons(icon, document.querySelector('.icon'));

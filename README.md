@@ -7,6 +7,8 @@ So feel free to clone and make additions/delitions to it.
 
 # As of April 2019 - Weather App V1
 
+![Screenshot from 2019-04-20 16-44-48](https://user-images.githubusercontent.com/28422206/56463585-19be8b80-638c-11e9-8878-78492e7dd55b.png)
+
 As of now, The application can be ran from localhost because of a really helpful tool called Cors : https://cors-anywhere.herokuapp.com/.
 This allows you to proxy to the Dark Sky API: https://darksky.net/forecast/40.7127,-74.0059/us12/en from localhost. (This is not needed if you 
 host from 3rd party hosting platform).

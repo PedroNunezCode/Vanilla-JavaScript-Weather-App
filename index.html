@@ -7,10 +7,20 @@
     <title>Weather</title>
 </head>
 <body>
+    <!-- The current Time -->
+    <div class="clock-wrapper">
+        <span id="clock"></span>
+    </div>
+    <div class="date">
+        <span id="date"></span>
+    </div>
+
+    <!-- Location and Icon -->
     <div class="location">
-        <h1 class="location-timezone">Timezone?</h1>
         <canvas class="icon" width="128" height="128"></canvas>
     </div>
+
+    <!-- Temperature and description -->
     <div class="temperature">
         <div class="degree-section">
             <h2 class="temperature-degree">0</h2>
@@ -19,7 +29,12 @@
         <div class="temperature-description">Please Allow access to location :)</div>
     </div>
 
+    <div class="weekday-wrapper">
+        
+    </div>
+
     <script src="skycons.js"></script>
     <script src="app.js"></script>
+    <script src="clock.js"></script>
 </body>
 </html>

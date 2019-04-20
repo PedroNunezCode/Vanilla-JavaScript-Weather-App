@@ -15,9 +15,20 @@ body {
     color: white;
 }
 
+.clock-wrapper span{
+    display: flex;
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: 10vw;
+    /* width: 50%; */
+}
+
+.date span{
+    font-size: 2vw;
+}
+
 .location, 
 .temperature {
-    height: 30vh;
+    height: 10vh;
     width: 50%;
     display: flex;
     justify-content: space-around;
@@ -41,4 +52,16 @@ body {
 
 .degree-section h2{
     font-size: 40px;
+}
+
+.weekday-wrapper{
+    margin: 0 10px;
+    display: flex;
+    width: 50%;
+    height: 15vh;
+}
+
+.days{
+    /* width: justify */
+    display: table-cell;
 }

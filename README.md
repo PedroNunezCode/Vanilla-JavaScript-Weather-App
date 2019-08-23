@@ -19,4 +19,4 @@ Celcius and Fahrenheit is supported by clicking the temperature. A discription o
 ## Future Updates
 
 Future updates will include showing the whole week of weather and its corresponding icons.
-A timer will also be added to the top of the page so you know the time, 12 and 24 hour format should be supported just like the temoperature.
+A timer will also be added to the top of the page so you know the time, 12 and 24 hour format should be supported just like the temperature.

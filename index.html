@@ -1,40 +1,83 @@
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./style.css">
-    <title>Weather</title>
+	<title>Weather App</title>
+	<link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    <!-- The current Time -->
-    <div class="clock-wrapper">
-        <span id="clock"></span>
-    </div>
-    <div class="date">
-        <span id="date"></span>
-    </div>
 
-    <!-- Location and Icon -->
-    <div class="location">
-        <canvas class="icon"></canvas>
-    </div>
+<body class="night-bg-color">
+	<div class="stars"></div>
+	<!-- The current Time -->
+	<div class="clock-wrapper">
+		<span id="clock"></span>
+	</div>
 
-    <!-- Temperature and description -->
-    <div class="temperature">
-        <div class="degree-section">
-            <h2 class="temperature-degree">0</h2>
-            <span>F</span>
-        </div>
-        <div class="temperature-description">Please Allow access to location :)</div>
-    </div>
+	<!-- The current Date -->
+	<div class="date-wrapper">
+		<span id="date"></span>
+	</div>
 
-    <div class="weekday-wrapper">
-        
-    </div>
+	<!-- Location and Icon -->
+	<div class="location-wrapper">
+		<canvas class="icon"></canvas>
+	</div>
 
-    <script src="skycons.js"></script>
-    <script src="app.js"></script>
-    <script src="clock.js"></script>
+	<!-- Temperature and description -->
+	<div class="temperature-wrapper">
+		<!-- Temperature description section -->
+		<div class="temperature-description">Please allow access to location.</div>
+
+		<!-- Degree section -->
+		<div class="degree-section">
+			<h2 class="temperature-degree">0</h2>
+			<span>F</span>
+		</div>
+	</div>
+
+	<div id="F" class="weekly-weather-wrapper">
+		<div>
+			<canvas class="weekly-icon1 weekly-icon"></canvas>
+			<span id="icon-day-span-1"></span>
+			<span id="icon-temp-span-1" class="weekly-temp-span"></span>
+		</div>
+		<div>
+			<canvas class="weekly-icon2 weekly-icon"></canvas>
+			<span id="icon-day-span-2"></span>
+			<span id="icon-temp-span-2" class="weekly-temp-span"></span>
+		</div>
+		<div>
+			<canvas class="weekly-icon3 weekly-icon"></canvas>
+			<span id="icon-day-span-3"></span>
+			<span id="icon-temp-span-3" class="weekly-temp-span"></span>
+		</div>
+		<div>
+			<canvas class="weekly-icon4 weekly-icon"></canvas>
+			<span id="icon-day-span-4"></span>
+			<span id="icon-temp-span-4" class="weekly-temp-span"></span>
+		</div>
+		<div>
+			<canvas class="weekly-icon5 weekly-icon"></canvas>
+			<span id="icon-day-span-5"></span>
+			<span id="icon-temp-span-5" class="weekly-temp-span"></span>
+		</div>
+		<div>
+			<canvas class="weekly-icon6 weekly-icon"></canvas>
+			<span id="icon-day-span-6"></span>
+			<span id="icon-temp-span-6" class="weekly-temp-span"></span>
+		</div>
+		<div>
+			<canvas class="weekly-icon7 weekly-icon"></canvas>
+			<span id="icon-day-span-7"></span>
+			<span id="icon-temp-span-7" class="weekly-temp-span"></span>
+		</div>
+	</div>
+	<h2 class="degree-info">* click on temperature to change from fahrenheit to celsius and vice versa *</h2>
+
+	<!-- Icon, clock, date and darksky api scripts. -->
+	<script src="./skycons.js"></script>
+	<script src="./app.js"></script>
+	<script src="./dateAndTime.js"></script>
+
 </body>
+
 </html>

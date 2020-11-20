@@ -1,68 +1,127 @@
 * {
-    margin: 0;
-    padding: 0;
-    padding-top: 20px;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(rgb(47, 150, 163), rgb(48,62,143));
-    font-family: sans-serif;
-    color: white;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	/* background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143)); */
+
+	font-family: sans-serif;
+	color: white;
 }
 
-.clock-wrapper span{
-    display: flex;
-    font-family: 'Courier New', Courier, monospace !important;
-    font-size: 10vw;
-    /* width: 50%; */
+.stars {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	background: url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+	z-index: 0;
 }
 
-.date span{
-    font-size: 2vw;
+.morning-bg-color {
+	background: linear-gradient(#f8b195, #f2727f, #c06c84, #6b5c7b, #355e7e);
 }
 
-.icon{
-    padding-top: 20px;
-    height: 10vh;
+.mid-day-bg-color {
+	background: linear-gradient(#f8b195, #c06c84);
 }
 
-.location, 
-.temperature {
-    height: 10vh;
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.afternoon-bg-color {
+	background: linear-gradient(#6b5c7b, #355e7e);
 }
 
-.temperature{
-    flex-direction: column;
+.night-bg-color {
+	background: linear-gradient(to top, #283e51, #0a2342);
 }
 
-.degree-section{
-    display: flex;
-    align-items: center;
-    cursor: pointer; 
+.clock-wrapper {
+	cursor: pointer;
 }
 
-.degree-section span{
-    margin: 10px;
-    font-size: 30px;
+.clock-wrapper span {
+	display: flex;
+	font-family: "Courier New", Courier, monospace !important;
+	font-size: 7vw;
 }
 
-.degree-section h2{
-    font-size: 40px;
+.date-wrapper span {
+	display: flex;
+	margin: 20px;
+	font-size: 2vw;
 }
 
-.weekday-wrapper{
-    margin: 0 10px;
-    display: flex;
-    width: 50%;
-    height: 15vh;
+.icon {
+	margin-top: 10px;
+	width: 10vw;
+}
+
+.location-wrapper,
+.temperature-wrapper {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.temperature-wrapper {
+	flex-direction: column;
+}
+
+.temperature-description {
+	font-size: 1vw;
+}
+
+.degree-section {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.degree-section span {
+	font-size: 1vw;
+}
+
+.degree-section h2 {
+	font-size: 1.5vw;
+}
+
+.weekly-weather-wrapper {
+	margin: 40px;
+	margin-top: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.weekly-weather-wrapper div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1vw;
+}
+
+.weekly-icon {
+	width: 5vw;
+	margin-bottom: 8px;
+}
+
+.weekly-temp-span {
+	font-size: 0.6vw;
+	cursor: pointer;
+	user-select: none;
+}
+
+.degree-info {
+	margin-top: 50px;
+	font-size: 1rem;
 }

@@ -21,7 +21,7 @@ window.addEventListener('load', () => {
 
 
 			// If on localhost we need a proxy to be able to fetch to the darksky.net API. (Remove if app is hosted).
-			const proxy = 'http://cors-anywhere.herokuapp.com/';
+			//const proxy = 'http://cors-anywhere.herokuapp.com/';
 
 			// Fetch from the dark sky api! Read more here -> https://darksky.net/dev
 			const url = `${proxy}https://api.darksky.net/forecast/592f11e28f8b197dcc41df2699af65f7/${lat},${long}`;

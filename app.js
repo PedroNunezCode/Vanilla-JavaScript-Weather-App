@@ -23,37 +23,37 @@ window.addEventListener('load', () => {
 			// If on localhost we need a proxy to be able to fetch to the darksky.net API. (Remove if app is hosted).
 			//const proxy = 'http://cors-anywhere.herokuapp.com/';
 			//const url = `${proxy}https://api.darksky.net/forecast/592f11e28f8b197dcc41df2699af65f7/${lat},${long}`;
-			
+
 			const url = `https://api.darksky.net/forecast/592f11e28f8b197dcc41df2699af65f7/${lat},${long}`;
 
-			const data = getLocationWeather(url);
-			console.log(data);
-			// fetch(url)
-			// 	.then(res => {
-			// 		return res.json();
-			// 	})
-			// 	.then(data => {
-			// 		setCurrentDayInformation(data);
-			// 		setWeeklyInformation(data.daily.data);
+			// const data = getLocationWeather(url);
+			// console.log(data);
+			fetch(url, {mode: 'cors'})
+				.then(res => {
+					return res.json();
+				})
+				.then(data => {
+					setCurrentDayInformation(data);
+					setWeeklyInformation(data.daily.data);
 
-			// 	})
-			// 	.catch((error) => {
-			// 		console.log(error);
-			// 	})
+				})
+				.catch((error) => {
+					console.log(error);
+				})
 		});
 	}
 
-	async function getLocationWeather(url = '', data={}){
-		const response = await fetch(url, {
-			method: 'GET',
-			mode: 'cors',
-			headers: {
-				"Access-Control-Allow-Origin": "*"
-			}
-		})
+	// async function getLocationWeather(url = '', data={}){
+	// 	const response = await fetch(url, {
+	// 		method: 'GET',
+	// 		mode: 'cors',
+	// 		headers: {
+	// 			"Access-Control-Allow-Origin": "*"
+	// 		}
+	// 	})
 
-		return response.json();
-	}
+	// 	return response.json();
+	// }
 
 	/**
 	 * This function will handle setting the correct icon and weather information for the current day and weekly items.

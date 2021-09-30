@@ -25,20 +25,24 @@ window.addEventListener('load', () => {
 			//const url = `${proxy}https://api.darksky.net/forecast/592f11e28f8b197dcc41df2699af65f7/${lat},${long}`;
 			
 			const url = `https://api.darksky.net/forecast/592f11e28f8b197dcc41df2699af65f7/${lat},${long}`;
+			// 'Access-Control-Allow-Origin: *'
 
-
-			fetch(url, {mode: "no-cors"})
+			$http({method: 'GET', url, headers:'Access-Control-Allow-Origin: *'})
 				.then(res => {
-					return res.json();
+					console.log((res.json()));
 				})
-				.then(data => {
-					setCurrentDayInformation(data);
-					setWeeklyInformation(data.daily.data);
+			// fetch(url)
+			// 	.then(res => {
+			// 		return res.json();
+			// 	})
+			// 	.then(data => {
+			// 		setCurrentDayInformation(data);
+			// 		setWeeklyInformation(data.daily.data);
 
-				})
-				.catch((error) => {
-					console.log(error);
-				})
+			// 	})
+			// 	.catch((error) => {
+			// 		console.log(error);
+			// 	})
 		});
 	}
 

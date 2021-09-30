@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
 			const url = `https://api.darksky.net/forecast/592f11e28f8b197dcc41df2699af65f7/${lat},${long}`;
 
 
-			fetch(url)
+			fetch(url, {mode: "no-cors"})
 				.then(res => {
 					return res.json();
 				})

@@ -25,12 +25,9 @@ window.addEventListener('load', () => {
 			//const url = `${proxy}https://api.darksky.net/forecast/592f11e28f8b197dcc41df2699af65f7/${lat},${long}`;
 			
 			const url = `https://api.darksky.net/forecast/592f11e28f8b197dcc41df2699af65f7/${lat},${long}`;
-			// 'Access-Control-Allow-Origin: *'
 
-			$http({method: 'GET', url, headers:'Access-Control-Allow-Origin: *'})
-				.then(res => {
-					console.log((res.json()));
-				})
+			const data = getLocationWeather(url);
+			console.log(data);
 			// fetch(url)
 			// 	.then(res => {
 			// 		return res.json();
@@ -44,6 +41,18 @@ window.addEventListener('load', () => {
 			// 		console.log(error);
 			// 	})
 		});
+	}
+
+	async function getLocationWeather(url = '', data={}){
+		const response = await fetch(url, {
+			method: 'GET',
+			mode: 'cors',
+			headers: {
+				"Access-Control-Allow-Origin": "*"
+			}
+		})
+
+		return response.json();
 	}
 
 	/**

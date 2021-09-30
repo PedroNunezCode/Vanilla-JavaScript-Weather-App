@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
 
 			// const data = getLocationWeather(url);
 			// console.log(data);
-			fetch(url, {mode: 'no-cors'})
+			fetch(url, {mode: 'cors', headers: ['Access-Control-Allow-Origin', "*"]})
 				.then(res => {
 					console.log(res);
 					return res.json();

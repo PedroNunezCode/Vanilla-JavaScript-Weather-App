@@ -20,3 +20,7 @@ Celcius and Fahrenheit is supported by clicking the temperature. A discription o
 
 Future updates will include showing the whole week of weather and its corresponding icons.
 A timer will also be added to the top of the page so you know the time, 12 and 24 hour format should be supported just like the temperature.
+
+# As of June 2022 - I remembered to add the final result image 😂
+
+![image](https://user-images.githubusercontent.com/28422206/173681366-30c294ca-768d-41d3-b304-e4b1393b661f.png)
